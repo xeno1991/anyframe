@@ -1,0 +1,10 @@
+# anyframe-source-ssh-host
+
+# Exclude 'Host *'
+grep "Host \+[a-zA-Z]" ${HOME}/.ssh/config \
+  | awk '{sub(/Host +/, ""); print $0}'
+
+# Local Variables:
+# mode: Shell-Script
+# End:
+# vim: ft=zsh
