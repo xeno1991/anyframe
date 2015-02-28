@@ -1,9 +1,0 @@
-for dir in  ${^fpath}/anyframe-functions/widgets(N-/); do
-  ls -1 $dir
-  break
-done
-
-# Local Variables:
-# mode: Shell-Script
-# End:
-# vim: ft=zsh
