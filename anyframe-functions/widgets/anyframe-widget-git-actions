@@ -1,11 +1,11 @@
-local target=$(anyframe-source-git-status ".." \
+local target="$(anyframe-source-git-status ".." \
   | anyframe-selector-auto \
-  | awk '{print $2}')
+  | awk '{print $2}')"
 
-local action=$(anyframe-source-git-actions \
-  | anyframe-selector-auto)
+local action="$(anyframe-source-git-actions \
+  | anyframe-selector-auto)"
 
-echo "${target}" | anyframe-action-execute git "${action}"
+echo "${target}" | anyframe-action-insert git "${action}"
 
 # Local Variables:
 # mode: Shell-Script
