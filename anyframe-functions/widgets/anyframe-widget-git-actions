@@ -1,0 +1,13 @@
+local target="$(anyframe-source-git-status ".." \
+  | anyframe-selector-auto \
+  | awk '{print $2}')"
+
+local action="$(anyframe-source-git-actions \
+  | anyframe-selector-auto)"
+
+echo "${target}" | anyframe-action-insert git "${action}"
+
+# Local Variables:
+# mode: Shell-Script
+# End:
+# vim: ft=zsh
